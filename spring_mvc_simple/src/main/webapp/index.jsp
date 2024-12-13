@@ -1,7 +1,10 @@
 <html>
 <body>
 	<div align="center">
-		<font style="color:red"><h2>Hello World!</h2></font>
+		<br> <br> <br>
+		<h1>
+			<a href="Welcome">Welcome to Spring-MVC</a>
+		</h1>
 	</div>
 
 </body>
