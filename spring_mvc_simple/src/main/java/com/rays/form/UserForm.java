@@ -1,5 +1,7 @@
 package com.rays.form;
 
+import org.hibernate.validator.constraints.NotEmpty;
+
 import com.rays.dto.UserDTO;
 import com.rays.util.DataUtility;
 
@@ -9,16 +11,22 @@ public class UserForm {
 	
 	private Long[] ids;
 
+	@NotEmpty(message="FirstName is required")
 	private String firstName;
 
+	@NotEmpty(message="LastName is required")
 	private String lastName;
 
+	@NotEmpty(message="Login is required")
 	private String login;
 
+	@NotEmpty(message="Password is required")
 	private String password;
 
+	@NotEmpty(message="Dob is required")
 	private String dob;
 
+	@NotEmpty(message="Address is required")
 	private String address;
 	
 	private int pageNo;

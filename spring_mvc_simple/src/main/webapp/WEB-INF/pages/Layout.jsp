@@ -1,6 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,15 +8,18 @@
 </head>
 <body>
 
-	<%@ include file="Header.jsp"%>
-
-	<div align="center">
-		<h1 style="color: limegreen">Welcome to Spring MVC...!!!</h1>
-		<h3>${Msg}</h3>
-
+	<div id="Header">
+		<tiles:insertAttribute name="header" />
 	</div>
-	
-	<%@ include file="Footer.jsp"%>
+
+	<div id="Body">
+		<tiles:insertAttribute name="body" />
+	</div>
+
+	<div id="Footer">
+		<tiles:insertAttribute name="footer" />
+	</div>
+
 
 </body>
 </html>

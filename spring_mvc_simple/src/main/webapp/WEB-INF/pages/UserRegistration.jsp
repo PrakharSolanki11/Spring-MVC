@@ -6,6 +6,13 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
+<style>
+.error {
+	color: red;
+	font-weight: bold;
+	font-size: 16px;
+}
+</style>
 </head>
 <body>
 
@@ -18,33 +25,42 @@
 		<div align="center">
 		    
 			<h1>User Registration</h1>
-			<h3 style="color:limegreen">${User}</h3>
+			<H3>
+				<c:if test="${not empty success}">
+					<font color="limegreen">${success}</font>
+				</c:if>
+			</H3>
 			<table>
 				<tr>
 					<th align="left">First Name :</th>
 					<td><sf:input path="firstName" /></td>
+					<td style="position: fixed"><sf:errors path="firstName" cssClass="error"></sf:errors></td>
 				</tr>
 				<tr>
 					<th align="left">Last Name :</th>
 					<td><sf:input path="lastName" /></td>
+					<td style="position: fixed"><sf:errors path="lastName" cssClass="error"></sf:errors></td>
 				</tr>
 				<tr>
-					<th align="left">Login :</th>
+					<th align="left">Login ID :</th>
 					<td><sf:input path="login" /></td>
+					<td style="position: fixed"><sf:errors path="login" cssClass="error"></sf:errors></td>
 				</tr>
 				<tr>
 					<th align="left">Password :</th>
 					<td><sf:input path="password" /></td>
+					<td style="position: fixed"><sf:errors path="password" cssClass="error"></sf:errors></td>
 				</tr>
 				<tr>
-					<th align="left">Dob :</th>
+					<th align="left">Date Of Birth :</th>
 					<td><sf:input path="dob" /></td>
+					<td style="position: fixed"><sf:errors path="dob" cssClass="error"></sf:errors></td>
 				</tr>
 				<tr>
 					<th align="left">Address :</th>
 					<td><sf:input path="address" /></td>
-				</tr>
-				<tr>
+					<td style="position: fixed"><sf:errors path="address" cssClass="error"></sf:errors></td>
+				</tr>				<tr>
 					<th></th>
 					<td><input type="submit" name="operation" value="SignUp"></td>
 

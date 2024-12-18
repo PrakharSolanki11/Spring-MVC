@@ -25,10 +25,11 @@ public class LoginCtl {
 	private UserService service;
 	
 	@GetMapping
-	public String display(@ModelAttribute("form") LoginForm form ,@RequestParam (required=false) String operation, HttpSession session ){
+	public String display(@ModelAttribute("form") LoginForm form ,Model model,@RequestParam (required=false) String operation, HttpSession session ){
 		
 		if(operation !=null && operation.equalsIgnoreCase("logout")) {
 			session.invalidate();
+			/* model.addAttribute("success", "User Logout Successfully"); */
 			return "redirect:LoginView";
 		}
 		return "LoginView";

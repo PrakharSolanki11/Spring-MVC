@@ -23,22 +23,25 @@
 				<b>Login</b>
 			</h1>
 
-			<h3 align="center">
+			<h2 align="center">
 				<c:if test="${not empty error}">
 					<font color="red">${error}</font>
 				</c:if>
-			</h3>
+				<c:if test="${not empty success}">
+					<font color="limegreen">${success}</font>
+				</c:if>
+			</h2>
 
 			<table>
 				<tr>
 					<th align="left">Login Id :</th>
 					<td><sf:input path="login" /></td>
-					<td><sf:errors path="login" cssClass="error"></sf:errors></td>
+					<td style="position: fixed"><sf:errors path="login" cssClass="error"></sf:errors></td>
 				</tr>
 				<tr>
 					<th align="left">Password :</th>
 					<td><sf:input path="password" /></td>
-					<td><sf:errors path="password" cssClass="error"></sf:errors></td>
+					<td style="position: fixed"><sf:errors path="password" cssClass="error"></sf:errors></td>
 				</tr>
 				<tr>
 					<th></th>
@@ -51,6 +54,7 @@
 		</div>
 
 	</sf:form>
+	<%@ include file="Footer.jsp"%>
 
 </body>
 </html>
