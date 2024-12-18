@@ -39,8 +39,8 @@ public class UserService{
 	}
 
 	@Transactional(readOnly = true)
-	public UserDTO findByPK(long pk) {
-		return dao.findByPK(pk);
+	public UserDTO findByPk(long pk) {
+		return dao.findByPk(pk);
 	}
 
 	@Transactional(readOnly = true)

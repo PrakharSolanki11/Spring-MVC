@@ -68,7 +68,7 @@ public class UserDao{
 
 	}
 
-	public UserDTO findByPK(long pk) throws DataAccessException {
+	public UserDTO findByPk(long pk) throws DataAccessException {
 		UserDTO dto = null;
 		dto = (UserDTO) sessionFactory.getCurrentSession().get(UserDTO.class, pk);
 		return dto;
