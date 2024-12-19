@@ -18,7 +18,7 @@ import com.rays.form.LoginForm;
 import com.rays.service.UserService;
 
 @Controller
-@RequestMapping(value="LoginView")
+@RequestMapping(value="Login")
 public class LoginCtl {
 	
 	@Autowired
@@ -29,17 +29,18 @@ public class LoginCtl {
 		
 		if(operation !=null && operation.equalsIgnoreCase("logout")) {
 			session.invalidate();
-			/* model.addAttribute("success", "User Logout Successfully"); */
-			return "redirect:LoginView";
+			model.addAttribute("success", "User Logout Successfully"); 
+			return "LoginView";
 		}
 		return "LoginView";
 	}
 	
 	@PostMapping
-	public String submit(@ModelAttribute("form")@Valid LoginForm form, BindingResult bindingResult,@RequestParam (required=false) String operation, HttpSession session,Model model ) {
+	public String submit(@ModelAttribute("form")@Valid LoginForm form, BindingResult bindingResult,@RequestParam(required=false) String operation, HttpSession session,Model model ) {
 		
-		if(operation.equalsIgnoreCase("signUp")) {
-			return "redirect:Register";
+		if(operation.equalsIgnoreCase("signUp")){
+		
+			return "redirect:UserRegistration";
 		}
 		
 		if(bindingResult.hasErrors()) {

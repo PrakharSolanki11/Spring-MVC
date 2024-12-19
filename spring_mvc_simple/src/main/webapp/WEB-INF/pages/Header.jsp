@@ -21,7 +21,7 @@
 		<b>|</b>
 		<a href="<c:url value="/User/search"/>"><b>User List</b></a>
 		<b>|</b>
-		<a href="<c:url value="/LoginView?operation=logout"/>"><b>Logout</b></a>
+		<a href="<c:url value="/Login?operation=logout"/>"><b>Logout</b></a>
 		<hr>
 	</c:if>
 
@@ -29,7 +29,7 @@
 		<h3>Hi, Guest</h3>
 		<a href="<c:url value="/Welcome"/>"><b>Welcome</b></a>
 		<b>|</b>
-		<a href="<c:url value="/LoginView"/>"><b>Login</b></a>
+		<a href="<c:url value="/Login"/>"><b>Login</b></a>
 		<hr>
 	</c:if>
 

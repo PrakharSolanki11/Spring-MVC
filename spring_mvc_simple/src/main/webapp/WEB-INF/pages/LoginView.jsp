@@ -1,5 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+<%@ page isELIgnored="false"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="sf"%>
+<%@taglib uri="http://www.springframework.org/tags" prefix="s"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,8 +19,8 @@
 </head>
 <body>
 
-	<%@ include file="Header.jsp"%>
-	<sf:form method="post" modelAttribute="form">
+	<%-- <%@ include file="Header.jsp"%> --%>
+	<sf:form method="post" action="Login" modelAttribute="form">
 
 		<div align="center">
 			<h1>
@@ -36,12 +40,14 @@
 				<tr>
 					<th align="left">Login Id :</th>
 					<td><sf:input path="login" /></td>
-					<td style="position: fixed"><sf:errors path="login" cssClass="error"></sf:errors></td>
+					<td style="position: fixed"><sf:errors path="login"
+							cssClass="error"></sf:errors></td>
 				</tr>
 				<tr>
 					<th align="left">Password :</th>
 					<td><sf:input path="password" /></td>
-					<td style="position: fixed"><sf:errors path="password" cssClass="error"></sf:errors></td>
+					<td style="position: fixed"><sf:errors path="password"
+							cssClass="error"></sf:errors></td>
 				</tr>
 				<tr>
 					<th></th>
@@ -54,7 +60,7 @@
 		</div>
 
 	</sf:form>
-	<%@ include file="Footer.jsp"%>
+	<%-- <%@ include file="Footer.jsp"%> --%>
 
 </body>
 </html>

@@ -20,7 +20,7 @@ import com.rays.service.UserService;
 import com.rays.util.DataUtility;
 
 @Controller
-@RequestMapping(value = "User")
+@RequestMapping(value="User")
 public class UserCtl {
 
 	@Autowired
@@ -29,7 +29,7 @@ public class UserCtl {
 	@ModelAttribute("form")
 	public void preload(Model model) {
 		UserDTO dto = null;
-		List list = service.search(dto, 0, 0);
+		List list = service.search(dto,0,0);
 		model.addAttribute("userList", list);
 	}
 

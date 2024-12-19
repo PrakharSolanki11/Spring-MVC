@@ -19,7 +19,7 @@ import com.rays.form.UserRegistrationForm;
 import com.rays.service.UserService;
 
 @Controller
-@RequestMapping(value = "Register")
+@RequestMapping(value = "UserRegistration")
 public class UserRegistrationCtl {
 
 	@Autowired
@@ -27,7 +27,6 @@ public class UserRegistrationCtl {
 
 	@GetMapping
 	public String display(@ModelAttribute("form") UserRegistrationForm form) {
-		System.out.println("Get Method Called...!!!");
 		return "UserRegistration";
 
 	}

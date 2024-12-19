@@ -26,7 +26,7 @@
 			value="/WEB-INF/pages/LoginView.jsp" />
 	</definition>
 
-	<definition name="Register" extends="base.definition">
+	<definition name="UserRegistration" extends="base.definition">
 		<put-attribute name="body"
 			value="/WEB-INF/pages/UserRegistration.jsp" />
 	</definition>
