@@ -38,7 +38,7 @@
 
 	<definition name="UserListView" extends="base.definition">
 		<put-attribute name="body"
-			value="/WEB-INF/pages/UserListView.jsp" />
+			value="/WEB-INF/pages/UserListView.jsp"/>
 	</definition>
 
 </tiles-definitions>

@@ -15,7 +15,7 @@
 	<h1 align="center"><b>User List</b></h1>
 	<sf:form method="post" modelAttribute="form">
 		<sf:hidden path="pageNo" />
-		<%-- <%int index= "${((form.pageNo-1)*5)+1}"%> --%>
+		
 		
 		
 		<table align="center">
@@ -45,14 +45,14 @@
 			<c:forEach items="${list}" var="user">
 				<tr>
 					<td align="center"><sf:checkbox path="ids" value="${user.id}" /></td>
-					<td align="center"><c:out value="${from.id}"></c:out></td>
+					<td align="center"><c:out value="${user.id}"></c:out></td>
 					<td align="center"><c:out value="${user.firstName }"></c:out></td>
 					<td align="center"><c:out value="${user.lastName }"></c:out></td>
 					<td align="center"><c:out value="${user.login }"></c:out></td>
 					<td align="center"><c:out value="${user.password }"></c:out></td>
 					<td align="center"><c:out value="${user.dob }"></c:out></td>
 					<td align="center"><c:out value="${user.address }"></c:out></td>
-					<td align="center"><a href="<c:url value="/User?id=${user.id}" />">Edit</a></td>
+					<td align="center"><a href="<c:url value="/Ctl/User?id=${user.id}" />">Edit</a></td>
 				</tr>
 			</c:forEach>
 		</table>

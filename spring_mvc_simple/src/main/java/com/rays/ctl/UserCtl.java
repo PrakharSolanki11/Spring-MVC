@@ -1,6 +1,6 @@
 package com.rays.ctl;
 
-import java.util.List;
+import java.util.List; 
 
 import javax.validation.Valid;
 
@@ -20,7 +20,7 @@ import com.rays.service.UserService;
 import com.rays.util.DataUtility;
 
 @Controller
-@RequestMapping(value="User")
+@RequestMapping(value="/Ctl/User")
 public class UserCtl {
 
 	@Autowired
@@ -55,6 +55,8 @@ public class UserCtl {
 	@PostMapping
 	public String submit(@ModelAttribute("form") @Valid UserForm form , BindingResult bindingResult ,Model model) {
 		
+		
+		
 		if (bindingResult.hasErrors()) {
 			return "UserView";
 		}
@@ -77,6 +79,8 @@ public class UserCtl {
 
 	@GetMapping("search")
 	public String display(@ModelAttribute("form") UserForm form, Model model) {
+		
+		System.out.println("Search 1");
 
 		UserDTO dto = null;
 
@@ -114,8 +118,7 @@ public class UserCtl {
 		}
 
 		if (operation.equals("add")) {
-
-			return "redirect:/User";
+			return "redirect:/Ctl/User";
 		}
 
 		if (operation.equals("delete")) {
