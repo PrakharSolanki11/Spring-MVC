@@ -17,6 +17,10 @@
 			value="jdbc:mysql://localhost:3306/spring_mvc" />
 		<property name="user" value="root" />
 		<property name="password" value="root" />
+		<property name="acquireIncrement" value="10" />
+		<property name="minPoolSize" value="10" />
+		<property name="maxPoolSize" value="100" />
+		<property name="maxIdleTime" value="10" />
 	</bean>
 
 	<bean id="sessionFactory"
