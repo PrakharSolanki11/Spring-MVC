@@ -38,12 +38,13 @@ public class LoginCtl {
 	@PostMapping
 	public String submit(@ModelAttribute("form")@Valid LoginForm form, BindingResult bindingResult,@RequestParam(required=false) String operation, HttpSession session,Model model ) {
 		
+		System.out.println("Search 1");
 		if(operation.equalsIgnoreCase("signUp")){
 		
 			return "redirect:UserRegistration";
 		}
 		
-		if(bindingResult.hasErrors()) {
+		if(bindingResult.hasErrors()){
 			
 			return "LoginView";
 			
@@ -53,7 +54,7 @@ public class LoginCtl {
 		
 		if(dto!=null) {
 			session.setAttribute("user", dto);
-			return "redirect:Welcome";
+			return "Welcome";
 		}
 		else {
 			model.addAttribute("error", "Login-Id and Password is invalid...!!!!");

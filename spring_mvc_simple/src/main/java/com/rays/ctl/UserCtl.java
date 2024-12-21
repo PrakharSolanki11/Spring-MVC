@@ -118,7 +118,7 @@ public class UserCtl {
 		}
 
 		if (operation.equals("add")) {
-			return "redirect:/Ctl/User";
+			return "redirect:/User";
 		}
 
 		if (operation.equals("delete")) {

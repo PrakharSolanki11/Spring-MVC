@@ -7,7 +7,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
+<meta charset="UTF-8">
 <title>Insert title here</title>
 <style>
 .error {
@@ -20,11 +20,12 @@
 <body>
 
 	<%-- <%@ include file="Header.jsp"%> --%>
-	<sf:form method="post" action="Login" modelAttribute="form">
+	<sf:form action="Login" method="post" modelAttribute="form">
 
 		<div align="center">
-			<h1>
-				<b>Login</b>
+		
+			<h1 style="color: navy">
+				<s:message code="user.label.login" />
 			</h1>
 
 			<h2 align="center">
@@ -37,17 +38,15 @@
 			</h2>
 
 			<table>
-				<tr>
-					<th align="left">Login Id :</th>
+			<tr>
+					<th align="left"><s:message code="user.label.loginId" /> :</th>
 					<td><sf:input path="login" /></td>
-					<td style="position: fixed"><sf:errors path="login"
-							cssClass="error"></sf:errors></td>
+					<td style="position: fixed"><sf:errors path="login" cssClass="error"></sf:errors></td>
 				</tr>
 				<tr>
-					<th align="left">Password :</th>
+					<th align="left"><s:message code="user.label.password" /> :</th>
 					<td><sf:input path="password" /></td>
-					<td style="position: fixed"><sf:errors path="password"
-							cssClass="error"></sf:errors></td>
+					<td style="position: fixed"><sf:errors path="password" cssClass="error"></sf:errors></td>
 				</tr>
 				<tr>
 					<th></th>

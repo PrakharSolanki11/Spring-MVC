@@ -7,16 +7,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
+<meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
 <body>
 	<%-- <%@ include file="Header.jsp"%> --%>
-	<h1 align="center"><b>User List</b></h1>
 	<sf:form method="post" modelAttribute="form">
 		<sf:hidden path="pageNo" />
 		
-		
+		<div align="center">
+			<h1 style="color: navy">
+				<s:message code="user.label.userList" />
+			</h1>
+		</div>
 		
 		<table align="center">
 				<td><sf:select path="id">
