@@ -53,9 +53,14 @@ public class UserCtl {
 	}
 	
 	@PostMapping
-	public String submit(@ModelAttribute("form") @Valid UserForm form , BindingResult bindingResult ,Model model) {
+	public String submit(@ModelAttribute("form") @Valid UserForm form , BindingResult bindingResult ,@RequestParam(required=false) String operation ,Model model) {
 		
-		
+		if(operation.equalsIgnoreCase("cancel")) {
+			return "redirect:/Ctl/User/search";
+		}
+		if(operation.equalsIgnoreCase("reset")) {
+			return "redirect:/Ctl/User";
+		}
 		
 		if (bindingResult.hasErrors()) {
 			return "UserView";

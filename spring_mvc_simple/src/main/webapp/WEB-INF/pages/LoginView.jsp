@@ -23,7 +23,7 @@
 	<sf:form action="Login" method="post" modelAttribute="form">
 
 		<div align="center">
-		
+
 			<h1 style="color: navy">
 				<s:message code="user.label.login" />
 			</h1>
@@ -38,20 +38,24 @@
 			</h2>
 
 			<table>
-			<tr>
+				<tr>
 					<th align="left"><s:message code="user.label.loginId" /> :</th>
 					<td><sf:input path="login" /></td>
-					<td style="position: fixed"><sf:errors path="login" cssClass="error"></sf:errors></td>
+					<td style="position: fixed"><sf:errors path="login"
+							cssClass="error"></sf:errors></td>
 				</tr>
 				<tr>
 					<th align="left"><s:message code="user.label.password" /> :</th>
 					<td><sf:input path="password" /></td>
-					<td style="position: fixed"><sf:errors path="password" cssClass="error"></sf:errors></td>
+					<td style="position: fixed"><sf:errors path="password"
+							cssClass="error"></sf:errors></td>
 				</tr>
 				<tr>
 					<th></th>
-					<td><input type="submit" name="operation" value="SignIn">
-						<input type="submit" name="operation" value="SignUp"></td>
+					<td><input type="submit" name="operation"
+						placeholder="<s:message code="button.signIn"/>" value="signIn">
+						<input type="submit" name="operation"
+						placeholder="<s:message code="button.signUp"/>" value="signUp"></td>
 				</tr>
 
 			</table>

@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.rays.dto.UserDTO;
 import com.rays.form.UserRegistrationForm;
@@ -32,8 +33,12 @@ public class UserRegistrationCtl {
 	}
 
 	@PostMapping
-	public String submit(@ModelAttribute("form") @Valid UserRegistrationForm form ,BindingResult bindingResult, Model model) {
+	public String submit(@ModelAttribute("form") @Valid UserRegistrationForm form ,BindingResult bindingResult,@RequestParam(required=false) String operation ,Model model) {
 
+		if(operation.equalsIgnoreCase("reset")) {
+			return "redirect:UserRegistration";
+		}
+		
 		if(bindingResult.hasErrors()) {
 			return "UserRegistration";
 		}
